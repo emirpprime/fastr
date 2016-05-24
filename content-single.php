@@ -14,7 +14,7 @@
 				if ( $categories_list && fastr_categorized_blog() ) :
 			?>
 			<span class="cat-links">
-				<?php printf( __( 'on %1$s', 'fastr' ), $categories_list ); ?>
+				<?php printf( __( 'in %1$s', 'fastr' ), $categories_list ); ?>
 			</span>
 			<?php endif; // End if categories ?>
 
@@ -29,7 +29,11 @@
 			<?php endif; // End if $tags_list ?>
 
 		</div><!-- .entry-meta -->
-        
+
+		<?php if ( has_post_thumbnail() ) {
+			the_post_thumbnail( 'large', array( 'class' => 'featured') );
+		} ?>
+
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 	</header><!-- .entry-header -->
 
