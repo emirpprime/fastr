@@ -19,7 +19,7 @@ function fastr_paging_nav() {
 		return;
 	}
 	?>
-	<nav class="navigation paging-navigation" role="navigation">
+	<nav class="navigation paging-navigation clear" role="navigation">
 		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'fastr' ); ?></h1>
 		<div class="nav-links">
 
