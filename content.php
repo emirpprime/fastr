@@ -15,7 +15,7 @@
 				if ( $categories_list && fastr_categorized_blog() ) :
 			?>
 			<span class="cat-links">
-				<?php printf( __( 'on %1$s', 'fastr' ), $categories_list ); ?>
+				<?php printf( __( 'in %1$s', 'fastr' ), $categories_list ); ?>
 			</span>
 			<?php endif; // End if categories ?>
 
@@ -32,10 +32,10 @@
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 
-		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>		
+		<h2 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 	</header><!-- .entry-header -->
 
-	
+
 	<div class="entry-summary">
         <?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
