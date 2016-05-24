@@ -14,7 +14,7 @@ Tags: black, gray, white, one-column, fluid-layout, rtl-language-support, respon
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 fastr on github: https://github.com/kanishkkunal/fastr-wordpress-theme
-    
+
 fastr is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
 
 Resetting and rebuilding styles have been helped along thanks to the fine work of
@@ -44,8 +44,8 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	outline: 0;
 	padding: 0;
 	vertical-align: baseline;
-    
-    
+
+
 }
 html {
 	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
@@ -105,8 +105,7 @@ input,
 select,
 textarea {
 	color: #303538;
-	font-family: Georgia, serif;
-	font-size: 20px;
+	font: 20px -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
 	line-height: 1.6em;
 }
 
@@ -115,7 +114,6 @@ h1, h2, h3, h4, h5, h6 {
 	clear: both;
     line-height: 1.4;
     margin-top: 0;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
 }
 
@@ -143,19 +141,19 @@ font-size: 4rem;
 }
 
 h3 {
-font-size: 3.5rem;    
+font-size: 3.5rem;
 }
 
 h4 {
-font-size: 3rem;    
+font-size: 3rem;
 }
 
 h5 {
-font-size: 2.5rem;    
+font-size: 2.5rem;
 }
 
 h6 {
-font-size: 2rem;    
+font-size: 2rem;
 }
 
 .site-title a, .entry-title a {
@@ -177,7 +175,7 @@ margin-bottom: 0px;
     color: #ccc;
 }
 
-.header-image {
+.header-image, .custom-logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -200,11 +198,10 @@ margin-bottom: 0px;
 }
 
 .entry-meta {
-    color: #9EABB3;
+    color: #4d5a62;
     margin-top: 10px;
     margin-bottom: 10px;
     font-size: 1.5rem;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .entry-meta a,
@@ -212,15 +209,15 @@ margin-bottom: 0px;
 .entry-meta a:focus,
 .entry-meta a:active {
     text-decoration: none;
-    color: #9EABB3;
+    color: #4d5a62;
 }
 
 .entry-meta a:hover {
     text-decoration: underline;
-    color: #9EABB3;
+    color: #4d5a62;
 }
 
-.entry-header {
+.entry-header, .page-header {
     margin-top: 40px;
 }
 
@@ -451,13 +448,25 @@ textarea {
 a {
 	color: #4a4a4a;
 }
+.main-navigation a {
+	color: #fff;
+}
 a:visited {
 	color: #4a4a4a;
+}
+.main-navigation a:visited {
+	color: #fff;
 }
 a:hover,
 a:focus,
 a:active {
 	color: #57A3E8;
+}
+.main-navigation a:hover,
+.main-navigation a:focus,
+.main-navigation a:active {
+	color: #fff;
+	text-decoration: underline;
 }
 
 /* Alignment */
@@ -538,25 +547,25 @@ a:active {
 /* =Menu
 ----------------------------------------------- */
 
-.main-navigation {
+.main-navigation, .secondary-navigation {
     display: inline-block;
 }
 
-.main-navigation ul {
+.main-navigation ul, .secondary-navigation ul {
 	list-style: none;
 	margin: 0;
 	padding-left: 0;
 }
-.main-navigation li {
+.main-navigation li, .secondary-navigation li {
 	float: left;
 	position: relative;
     margin: 10px;
 }
-.main-navigation a {
+.main-navigation a, .secondary-navigation a {
 	display: block;
 	text-decoration: none;
 }
-.main-navigation ul ul {
+.main-navigation ul ul, .secondary-navigation ul ul {
 	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
     background-color: #fff;
 	display: none;
@@ -566,27 +575,27 @@ a:active {
 	bottom: 1.5em;
 	z-index: 99999;
 }
-.main-navigation ul ul ul {
+.main-navigation ul ul ul, .secondary-navigation ul ul ul {
 	left: 90%;
     bottom: 0%;
 }
-.main-navigation ul ul a {
+.main-navigation ul ul a, .secondary-navigation ul ul a {
 	width: 200px;
 }
-.main-navigation ul ul li {
+.main-navigation ul ul li, .secondary-navigation ul ul li {
 }
-.main-navigation li:hover > a {
+.main-navigation li:hover > a, .secondary-navigation li:hover > a {
 }
-.main-navigation ul ul :hover > a {
+.main-navigation ul ul :hover > a, .secondary-navigation ul ul :hover > a {
     color: #666;
 }
-.main-navigation ul ul a:hover {
+.main-navigation ul ul a:hover, .secondary-navigation ul ul a:hover {
 }
-.main-navigation ul li:hover > ul {
+.main-navigation ul li:hover > ul, .secondary-navigation ul li:hover > ul {
 	display: block;
 }
-.main-navigation li.current_page_item a,
-.main-navigation li.current-menu-item a {
+.main-navigation li.current_page_item a, .secondary-navigation li.current_page_item a,
+.main-navigation li.current-menu-item a, .secondary-navigation li.current-menu-item a {
 }
 
 /* =Content
@@ -685,7 +694,6 @@ object {
 
 .site-main [class*="navigation"] {
 	margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.8rem;
     color: #9EABB3;
     text-align: center;
@@ -704,7 +712,7 @@ object {
 
 [class*="navigation"] .nav-previous a,
 [class*="navigation"] .nav-next a {
-    
+
     padding: 5px 15px;
 	border: #EBF2F6 2px solid;
     text-decoration: none;
@@ -721,13 +729,8 @@ padding: 0;
 }
 
 .comment {
-    border-top: #EBF2F6 1px solid;    
-    font-family: Arial, Helvetica, sans-serif;
+    border-top: #EBF2F6 1px solid;
     padding-top: 24px;
-}
-
-.comment-content {  
-    font-family: Georgia, serif;
 }
 
 .comments-title {
@@ -742,7 +745,7 @@ padding: 0;
 }
 
 .comment-metadata {
-    font-size: 1.4rem;    
+    font-size: 1.4rem;
     color: #a2a2a2;
 }
 
@@ -796,19 +799,26 @@ li.comment {
 .site-footer {
     position: relative;
     margin: 6rem 0 0 0;
-    padding: 4rem 0;
+    padding: 4rem 0 2rem 0;
     border-top: #EBF2F6 1px solid;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.3rem;
     line-height: 1.7em;
-    color: #BBC7CC;
+    color: #3f4e54;
     text-align: center;
     background: #F7FAFB;
 }
 
 .site-footer a {
-    color: #BBC7CC; 
+    color: #3f4e54;
     text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.site-info {
+	padding: 2rem 0;
 }
 
 .back-to-top {
@@ -829,7 +839,10 @@ text-decoration: none;
 
 .widget-area {
     clear: both;
-    margin: 8rem 0 0 0;
+    margin: 6rem 0 0 0;
+	padding: 1em;
+    background: #F7FAFB;
+	border: 1px solid #EBF2F6;
 }
 
 /* =Infinite Scroll
@@ -847,7 +860,7 @@ text-decoration: none;
 }
 
 @media only screen and (max-width: 900px) {
-    
+
     body,
     button,
     input,
