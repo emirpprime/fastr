@@ -157,14 +157,12 @@ h6 {
 font-size: 2rem;
 }
 
-.site-title a, .entry-title a {
-    text-decoration: none;
-}
 
 .site-title {
 	font-size: 6rem;
 	margin-top: -20px;
 	margin-bottom: 0px;
+	text-shadow: 1px 1px 2px #000;
 }
 
 .site-description {
@@ -186,6 +184,9 @@ font-size: 2rem;
     -webkit-border-radius: 50%;
 	-moz-border-radius:    50%;
 	border-radius:         50%;
+	-webkit-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.8);
+	box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.8);
 }
 
 .site-title a,
@@ -207,13 +208,11 @@ font-size: 2rem;
 .entry-meta a:visited,
 .entry-meta a:focus,
 .entry-meta a:active {
-    text-decoration: none;
     color: #4d5a62;
 }
 
 .entry-meta a:hover {
-    text-decoration: underline;
-    color: #4d5a62;
+    color: #165296;
 }
 
 .entry-header, .page-header {
@@ -453,13 +452,13 @@ textarea {
 
 /* Links */
 a {
-	color: #4a4a4a;
+	color: #165296;
 }
 .main-navigation a {
 	color: #fff;
 }
 a:visited {
-	color: #4a4a4a;
+	color: #165296;
 }
 .main-navigation a:visited {
 	color: #fff;
