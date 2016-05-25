@@ -160,7 +160,6 @@ font-size: 2rem;
 
 .site-title {
 	font-size: 6rem;
-	margin-top: -20px;
 	margin-bottom: 0px;
 	text-shadow: 1px 1px 2px #000;
 }
@@ -176,17 +175,15 @@ font-size: 2rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
     min-width: 100px;
 	max-width: 300px;
 	height: auto;
     -webkit-border-radius: 50%;
 	-moz-border-radius:    50%;
 	border-radius:         50%;
-	-webkit-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.8);
-	-moz-box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.8);
-	box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.8);
+	-webkit-box-shadow: 2px 2px 1px 0px rgba(0,0,0,.6);
+	-moz-box-shadow: 2px 2px 1px 0px rgba(0,0,0,.6);
+	box-shadow: 2px 2px 1px 0px rgba(0,0,0,.6);
 }
 
 .site-title a {
@@ -444,7 +441,7 @@ textarea {
 }
 
 /* Links */
-a:link,
+a,
 a:visited,
 a:hover,
 a:active,
