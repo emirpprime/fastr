@@ -25,42 +25,42 @@
 	<header id="masthead" class="site-header text-center" role="banner">
 		<div class="container">
 			<?php
-			// Display Custom Logo if set, else Gravatar.
-			$custom_logo = get_custom_logo();
-			if ( $custom_logo ) {
-				// Custom logo set - let's output.
-				echo wp_kses_post( $custom_logo );
-			} else {
-				// Fallback to Gravatar / discussion image.
-				$header_image = '';
-				// Get default from Discussion Settings.
-				$default = get_option( 'avatar_default', 'mystery' ); // Mystery man default.
-				if ( 'mystery' == $default ) :
-					$default = 'mm';
-				elseif ( 'gravatar_default' == $default ) :
-					$default = '';
-				endif;
+			if ( is_home() ) :
+				// Display Custom Logo if set, else Gravatar.
+				$custom_logo = get_custom_logo();
+				if ( $custom_logo ) {
+					// Custom logo set - let's output.
+					echo wp_kses_post( $custom_logo );
+				} else {
+					// Fallback to Gravatar / discussion image.
+					$header_image = '';
+					// Get default from Discussion Settings.
+					$default = get_option( 'avatar_default', 'mystery' ); // Mystery man default.
+					if ( 'mystery' == $default ) :
+						$default = 'mm';
+					elseif ( 'gravatar_default' == $default ) :
+						$default = '';
+					endif;
 
-				$protocol = ( is_ssl() ) ? 'https://secure.' : 'http://';
-				$url = sprintf( '%1$sgravatar.com/avatar/%2$s/', $protocol, md5( get_option( 'admin_email' ) ) );
-				$url = add_query_arg( array(
-					's' => 120,
-					'd' => urlencode( $default ),
-				), $url );
+					$protocol = ( is_ssl() ) ? 'https://secure.' : 'http://';
+					$url = sprintf( '%1$sgravatar.com/avatar/%2$s/', $protocol, md5( get_option( 'admin_email' ) ) );
+					$url = add_query_arg( array(
+						's' => 120,
+						'd' => urlencode( $default ),
+					), $url );
 
-				$header_image = esc_url_raw( $url );
-				if ( ! empty( $header_image ) ) : ?>
-					<a class="site-logo"  href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<img src="<?php echo $header_image; ?>" alt="" class="header-image" />
-					</a>
-				<?php endif;
-			} ?>
+					$header_image = esc_url_raw( $url );
+					if ( ! empty( $header_image ) ) : ?>
+						<a class="site-logo"  href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+							<img src="<?php echo $header_image; ?>" alt="" class="header-image" />
+						</a>
+					<?php endif;
+				}
+			endif; ?>
 			<div class="site-branding text-center">
-
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<?php if ( is_home() ) : ?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 				<?php endif; ?>
 			</div>
 		</div>

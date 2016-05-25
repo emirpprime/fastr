@@ -130,6 +130,7 @@ body {
 .site-header {
     background: #303538;
     color: #fff;
+    padding-top: 1em;
 }
 
 h1 {
@@ -161,15 +162,13 @@ font-size: 2rem;
 }
 
 .site-title {
-font-size: 6rem;
-line-height: 2em;
-margin-top: -20px;
-margin-bottom: 0px;
+	font-size: 6rem;
+	margin-top: -20px;
+	margin-bottom: 0px;
 }
 
 .site-description {
     font-size: 3rem;
-    line-height: 2em;
     margin-bottom: 40px;
     font-weight: 300;
     color: #ccc;
@@ -442,6 +441,14 @@ textarea {
 	padding-left: 3px;
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 98%;
+}
+
+@media only screen and (max-width: 768px) {
+	.wpcf7-form input,
+	.wpcf7-form textarea,
+	.wpcf7-form select {
+		width: 98%;
+	}
 }
 
 /* Links */
