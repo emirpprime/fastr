@@ -273,6 +273,12 @@ dfn, cite, em, i {
 blockquote {
 	margin: 0 1.5em;
 }
+.pullquote {
+	margin:1em;
+	padding:1em;
+	background: #F7FAFB;
+	font-size:1.1em;
+}
 address {
 	margin: 0 0 1.5em;
 }
