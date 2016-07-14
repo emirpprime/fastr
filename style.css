@@ -112,7 +112,7 @@ textarea {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
-    line-height: 1.4;
+    line-height: 1.3;
     margin-top: 0;
     font-weight: 700;
 }
@@ -258,6 +258,9 @@ li > ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
+li {
+	margin-bottom: 0.5em;
+}
 dt {
 	font-weight: bold;
 }
@@ -271,7 +274,17 @@ dfn, cite, em, i {
 	font-style: italic;
 }
 blockquote {
-	margin: 0 1.5em;
+	border-left: 1px solid #000;
+	padding-left: 1em;
+	margin-left: -1em;
+	font-style: italic;
+	color: #000;
+}
+blockquote cite {
+	font-style: normal;
+}
+blockquote cite:before {
+    content: "\2015\00a0";
 }
 .pullquote {
 	margin:1em;
