@@ -292,6 +292,13 @@ blockquote cite:before {
 	background: #F7FAFB;
 	font-size:1.1em;
 }
+.disclaimer {
+	padding: 0.5em 1em;
+	font-size: 0.8em;
+	line-height: 1.4em;
+	background: #f7fafb;
+	border: 1px solid #ebf2f6;
+}
 address {
 	margin: 0 0 1.5em;
 }
