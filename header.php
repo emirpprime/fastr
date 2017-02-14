@@ -25,7 +25,7 @@
 	<header id="masthead" class="site-header text-center" role="banner">
 		<div class="container">
 			<?php
-			if ( is_home() ) :
+			if ( is_home() || is_front_page() ) :
 				// Display Custom Logo if set, else Gravatar.
 				$custom_logo = get_custom_logo();
 				if ( $custom_logo ) {
