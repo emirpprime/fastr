@@ -158,3 +158,15 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Don't load Merriweather in Automattic AMP plugin (https://github.com/Automattic/amp-wp).
+ * This theme is configured for speed so don't load unecessary fonts.
+ * @param  array $data Array of values to pass to AMP template.
+ * @return array       Modified $data array.
+ */
+function fastr_remote_merriweather_amp( $data ) {
+	unset( $data['font_urls']['merriweather'] );
+	return $data;
+}
+add_filter( 'amp_post_template_data', 'fastr_remote_merriweather_amp', 10 );
